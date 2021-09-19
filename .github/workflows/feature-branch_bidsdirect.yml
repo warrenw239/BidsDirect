@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'BidsDirect'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2CD69B5D74C94BC5B0E3CD23450DC815 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F8F7376868514BF3A3AE7F0C7C744E66 }}
           package: .
