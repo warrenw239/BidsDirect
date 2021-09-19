@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - node
+cache: npm
+
+install:
+  - npm ci
+ 
+script: 
+  - npm test
+  - npm run build
+
+deploy:
+ provider: azure_web_apps
+ on:
+   branch: feature-branch
+
+
+
