@@ -13,6 +13,7 @@ script:
 
 deploy:
  provider: azure_web_apps
+ username: warrenw239
  on:
    branch: feature-branch
 
