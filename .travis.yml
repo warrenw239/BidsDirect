@@ -15,6 +15,7 @@ deploy:
  provider: azure_web_apps
  username: warrenw239
  password: Bluecode239!
+ Site: BidsDirect
  on:
    branch: feature-branch
 
