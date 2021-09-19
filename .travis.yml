@@ -14,7 +14,7 @@ script:
 deploy:
  provider: azure_web_apps
  username: warrenw239
- password: BlueCode239!
+ password: Bluecode239!
  on:
    branch: feature-branch
 
