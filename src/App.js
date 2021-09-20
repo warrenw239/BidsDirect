@@ -8,8 +8,8 @@ import NavBarIn from './components/NavBarIn';
 import ConsumerProfile from './components/ConsumerProfile';
 
 function App() {
-    const { isAuthenticated } = useAuth0();
-    const { isLoading } = useAuth0();
+    const { isAuthenticated, isLoading, user } = useAuth0();
+
 
     if (isLoading) {
       return <div>loading...</div>;
@@ -26,6 +26,7 @@ function App() {
             <div className="App">
                 <NavBarIn />
                 <ConsumerProfile />
+                {console.log(user)}
             </div>
         );
     }
