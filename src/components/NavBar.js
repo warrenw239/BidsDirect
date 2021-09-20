@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/NavBar.css';
+import LoginButton from './LoginButton';
 
 const NavBar = () => {
     const [navStatus, useNavBar] = useState(false);
@@ -18,6 +19,7 @@ const NavBar = () => {
                         BidsDirect: Find The Best Fit For Your Next Project
                     </span>
                     <nav>
+                        <LoginButton />
                         <ul
                             className="mainNav"
                             style={
