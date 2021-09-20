@@ -101,12 +101,12 @@ const NavBar = () => {
                                         className="mainNavLink"
                                         href="/ForConsumers"
                                     >
-                                        For Consumers
+                                        Find Contractors
                                     </a>
                                 </li>
                                 <li>
                                     <a className="mainNavLink" href="#">
-                                        For Contractors
+                                        Start New Project
                                     </a>
                                 </li>
                                 <li></li>
