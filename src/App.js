@@ -8,6 +8,11 @@ import NavBarIn from './components/NavBarIn';
 
 function App() {
     const { isAuthenticated } = useAuth0();
+    const { isLoading } = useAuth0();
+
+    if (isLoading) {
+      return <div>loading...</div>;
+    }
     if (!isAuthenticated) {
         return (
             <div className="App">
