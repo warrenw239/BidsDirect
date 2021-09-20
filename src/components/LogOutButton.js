@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 
 const LogOutButton = () => {
-    const { logout } = useAuth0;
+    const { logout } = useAuth0();
 
     return (
         <Button
