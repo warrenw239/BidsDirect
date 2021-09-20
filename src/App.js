@@ -5,6 +5,7 @@ import NavBarOut from './components/NavBarOut';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import NavBarIn from './components/NavBarIn';
+import ConsumerProfile from './components/ConsumerProfile';
 
 function App() {
     const { isAuthenticated } = useAuth0();
@@ -24,6 +25,7 @@ function App() {
         return (
             <div className="App">
                 <NavBarIn />
+                <ConsumerProfile />
             </div>
         );
     }
