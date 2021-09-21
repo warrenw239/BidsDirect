@@ -15,3 +15,5 @@ deploy:
  provider: azure_web_apps
  username: warrenw239
  Site: BidsDirect
+ on:
+  all_branches: true 
