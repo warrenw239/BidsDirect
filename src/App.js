@@ -5,7 +5,9 @@ import { Switch, BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import NavBarIn from './components/NavBarIn';
 import LandingPage from './Pages/LandingPage';
-// import ConsumerProfile from './components/ConsumerProfile';
+import ForConsumers from './Pages/ForConsumers';
+import ForContractors from './Pages/ForContractors';
+
 
 function App() {
   const { isAuthenticated, isLoading, user } = useAuth0();
@@ -21,10 +23,10 @@ function App() {
             <LandingPage />
           </Route>
           <Route exact path="/ForConsumers">
-            <div>consumers</div>
+            <ForConsumers />
           </Route>
           <Route exact path="/ForContractors">
-            <div>contractors</div>
+           <ForContractors />
           </Route>
         </Switch>
       </Router>
