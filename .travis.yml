@@ -9,11 +9,5 @@ install:
  
 script: 
   - npm run lint 
+  - npm test
   - npm run build
-
-deploy:
- provider: azure_web_apps
- username: warrenw239
- Site: BidsDirect
- on:
-  all_branches: true 
