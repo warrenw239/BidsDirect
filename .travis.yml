@@ -14,9 +14,6 @@ script:
 deploy:
  provider: azure_web_apps
  username: warrenw239
- Site: 
+ Site: BidsDirect
  on:
   all_branches: true 
-
-env:
- password: password 
