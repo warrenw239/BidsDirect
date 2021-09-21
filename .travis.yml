@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - node
+cache: npm
+
+install:
+  - npm ci
+ 
+script: 
+  - npm run lint
+  - npm run build
+
+deploy:
+ provider: azure_web_apps
+ username: warrenw239
+ password: Bluecode239!
+ Site: BidsDirect
+ on:
+   branch: feature-branch
