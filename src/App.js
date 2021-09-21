@@ -25,7 +25,7 @@ function App() {
             <div className="App">
                 <NavBarIn />
                 {/* <ConsumerProfile /> */}
-                {/* {console.log(user)} */}
+                {console.log(user)}
             </div>
         );
     }
