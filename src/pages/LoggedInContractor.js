@@ -1,10 +1,10 @@
 import React from 'react';
-import NavBarInContractorHome from '../components/NavBarInContractorHome';
+import NavBarContractorHome from '../components/NavBarContractorHome';
 
 const LoggedInContractor = () => {
   return (
     <div>
-      <NavBarInContractorHome />
+      <NavBarContractorHome />
     </div>
   );
 };

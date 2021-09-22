@@ -4,6 +4,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import LandingPage from './pages/LandingPage';
 import LoggedInConsumer from './pages/LoggedInConsumer';
+import LoggedInContractor from './pages/LoggedInContractor';
 
 function App() {
   const { isAuthenticated, isLoading, user } = useAuth0();
@@ -32,6 +33,25 @@ function App() {
         <Switch>
           <Route exact path="/">
             <LoggedInConsumer />
+          </Route>
+          <Route exact path="/securedConsumer">
+            <div>secured page. add info about projects</div>
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
+  if (
+    isAuthenticated &&
+    user &&
+    user['https://example.com/roles'] === 'Contractor'
+  ) {
+    console.log(user);
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <LoggedInContractor />
           </Route>
           <Route exact path="/securedConsumer">
             <div>secured page. add info about projects</div>
