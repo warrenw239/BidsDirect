@@ -1,0 +1,8 @@
+
+.btn-primary {
+    display: flex;
+    margin-top: 20px;
+    height: 30px;
+    background-color: rgb(92, 92, 220);
+    color: white;
+}
