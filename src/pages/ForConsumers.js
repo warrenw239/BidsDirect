@@ -1,11 +1,11 @@
 import React from 'react';
+import NavBarForAboutPages from '../components/NavBarForAboutPages';
 import '../styles/NavBar.css';
-import NavBarForContractorsAndConsumers from '../components/NavBarForContractorsAndConsumers';
 
 const ForConsumers = () => {
   return (
     <div>
-      <NavBarForContractorsAndConsumers />
+      <NavBarForAboutPages />
     </div>
   );
 };
