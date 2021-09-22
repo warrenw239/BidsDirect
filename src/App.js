@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LandingPage from './pages/LandingPage';
 import LoggedInConsumer from './pages/LoggedInConsumer';
 import LoggedInContractor from './pages/LoggedInContractor';
+import ForConsumers from './pages/ForConsumers';
 
 function App() {
   const { isAuthenticated, isLoading, user } = useAuth0();
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={LandingPage}></Route>
+          <Route exact path="/ForConsumers" component={ForConsumers}></Route>
         </Switch>
       </Router>
     );
