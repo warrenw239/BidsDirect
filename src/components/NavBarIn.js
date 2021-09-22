@@ -29,13 +29,18 @@ const NavBarIn = () => {
                             }
                         >
                             <li>
-                                <a className="mainNavLink" href="/ForConsumers">
-                                    Find Contractors
+                                <a className="mainNavLink" href="/securedConsumer">
+                                    Current Projects
                                 </a>
                             </li>
                             <li>
-                                <a className="mainNavLink" href="#">
+                                <a className="mainNavLink" href="/startNewProject">
                                     Start New Project
+                                </a>
+                            </li>
+                            <li>
+                                <a className="mainNavLink" href="/ForConsumers">
+                                    Find Contractors
                                 </a>
                             </li>
                             <li></li>
