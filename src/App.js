@@ -21,7 +21,11 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage}></Route>
           <Route exact path="/ForConsumers" component={ForConsumers}></Route>
-          <Route exact path="/ForContractors" component={ForContractors}></Route>
+          <Route
+            exact
+            path="/ForContractors"
+            component={ForContractors}
+          ></Route>
         </Switch>
       </Router>
     );
@@ -36,7 +40,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <LoggedInConsumer />
+            <LoggedInConsumer user={user}/>
           </Route>
           <Route exact path="/securedConsumer">
             <div>secured page. add info about projects</div>

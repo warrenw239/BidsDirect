@@ -21,6 +21,7 @@ const projectSchema = new mongoose.Schema({
   bids: Array,
   type: String,
   location: String,
+  exiration: Number
 });
 
 const contractorSchema = new mongoose.Schema({
