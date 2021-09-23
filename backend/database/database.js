@@ -7,8 +7,9 @@ const connection = () =>
     console.log(`database connected at ${host}`);
   });
 
-const userSchema = new mongoose.Schema({
+const consumerSchema = new mongoose.Schema({
   username: String,
+  email: String,
   projects: Array,
 });
 
@@ -24,8 +25,18 @@ const projectSchema = new mongoose.Schema({
 
 const contractorSchema = new mongoose.Schema({
   Company: String,
+  email: String,
   capabilities: Array,
   projects: Array,
 });
 
-module.exports = connection;
+const Consumer = mongoose.model('Consumer', consumerSchema);
+const Project = mongoose.model('Project', projectSchema);
+const Contractor = mongoose.model('Contractor', contractorSchema);
+
+module.exports = {
+  connection: connection,
+  Consumer: Consumer,
+  Project: Project,
+  Contractor: Contractor,
+};

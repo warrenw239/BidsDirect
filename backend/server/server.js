@@ -1,5 +1,5 @@
 const express = require('express');
-const connection = require('../database/database');
+const DBimports = require('../database/database');
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.get('/*', function (req, res) {
   res.sendFile('/Users/warren/Documents/Project/BidsDirect/build/index.html');
 });
 
-connection();
+DBimports.connection();
 
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
