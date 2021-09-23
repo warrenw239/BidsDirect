@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import LoggedInConsumer from './pages/LoggedInConsumer';
 import LoggedInContractor from './pages/LoggedInContractor';
 import ForConsumers from './pages/ForConsumers';
+import ForContractors from './pages/ForContractors';
 
 function App() {
   const { isAuthenticated, isLoading, user } = useAuth0();
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage}></Route>
           <Route exact path="/ForConsumers" component={ForConsumers}></Route>
+          <Route exact path="/ForContractors" component={ForContractors}></Route>
         </Switch>
       </Router>
     );
