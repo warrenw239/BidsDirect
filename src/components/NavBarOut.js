@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/NavBar.css';
 
-
 const NavBarOut = () => {
   const [navStatus, useNavBar] = useState(false);
   return (

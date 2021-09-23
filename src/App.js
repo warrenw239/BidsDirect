@@ -1,11 +1,14 @@
 import React from 'react';
-import NavBarOut from './components/NavBarOut';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
 
 function App() {
-  return (
-    <div className="App">
-      <NavBarOut />
-    </div>
+  return ( 
+    <Router>
+      <Switch>
+      <Route exact path="/" component={LandingPage}></Route>
+      </Switch>
+    </Router>
   );
 }
 
