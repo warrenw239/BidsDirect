@@ -1,8 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 const Auth0providerWithHistory = ({ children }) => {
     const history = useHistory();
     const domain = process.env.REACT_APP_AUTHO_DOMAIN;
@@ -23,5 +23,10 @@ const Auth0providerWithHistory = ({ children }) => {
         </Auth0Provider>
     );
 };
+
+//NOTE: edit this to be more specific
+Auth0providerWithHistory.propTypes = {
+    children: PropTypes.any
+  };
 
 export default Auth0providerWithHistory;

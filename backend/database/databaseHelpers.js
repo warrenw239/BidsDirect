@@ -5,8 +5,7 @@ const createConsumer = (user) => {
     console.log(info);
   });
 };
-const removeConsumer = () => {};
-const updateConsumer = () => {};
+
 const readConsumer = () => {
   DBimports.Consumer.find().then((users) => {
     console.log(users);
