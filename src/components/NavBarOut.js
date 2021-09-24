@@ -4,7 +4,7 @@ import '../styles/NavBar.css';
 const NavBarOut = () => {
   const [navStatus, useNavBar] = useState(false);
   return (
-    <div>
+    <>
       <header className="header">
         <div className="navContainer">
           <span
@@ -18,7 +18,6 @@ const NavBarOut = () => {
             BidsDirect: Find The Best Fit For Your Next Project
           </span>
           <nav>
-
             <ul
               className="mainNav"
               style={navStatus ? { transform: 'translateX(0)' } : null}
@@ -33,7 +32,6 @@ const NavBarOut = () => {
                   For Contractors
                 </a>
               </li>
-              <li></li>
             </ul>
           </nav>
           <button
@@ -51,7 +49,7 @@ const NavBarOut = () => {
         </div>
       </header>
       <div className="wrapper"></div>
-    </div>
+    </>
   );
 };
 
