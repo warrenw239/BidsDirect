@@ -3,6 +3,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import LandingPage from './pages/LandingPage';
 import ForContractors from './pages/ForContractors';
+import LoggedInConsumer from './pages/LoggedInConsumer';
 
 const App = () => {
   const { isAuthenticated, isLoading, user } = useAuth0();
@@ -33,9 +34,7 @@ const App = () => {
     return (
       <Router>
         <Switch>
-          <Route exact path="/">
-            <div>logged in consumer</div>
-          </Route>
+          <Route exact path="/" component={LoggedInConsumer} />
           <Route exact path="/securedConsumer">
             <div>secured page. add info about projects</div>
           </Route>
