@@ -1,7 +1,7 @@
-import React from 'react';
 import NavBarContractorHome from '../components/NavBarContractorHome';
+import React from 'react';
 
-//NOTE: more to add here. do not change to implicit return
+//TODO: more to add here. do not change to implicit return
 const LoggedInContractor = () => {
   return (
     <div>

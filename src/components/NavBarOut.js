@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import '../styles/NavBar.css';
 import LogInButton from './LogInButton';
+import React, { useState } from 'react';
 
 const NavBarOut = () => {
     const [navStatus, useNavBar] = useState(false);

@@ -1,7 +1,7 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Auth0providerWithHistory = ({ children }) => {
     const history = useHistory();
@@ -24,7 +24,7 @@ const Auth0providerWithHistory = ({ children }) => {
     );
 };
 
-//NOTE: edit this to be more specific
+//TODO: edit this to be more specific
 Auth0providerWithHistory.propTypes = {
     children: PropTypes.any
   };

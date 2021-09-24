@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import '../styles/NavBar.css';
+import React, { useState } from 'react';
 
 const NavBarForAboutPages = () => {
     const [navStatus, useNavBar] = useState(false);

@@ -1,7 +1,7 @@
-import React from 'react';
 import NavBarOut from '../components/NavBarOut';
+import React from 'react';
 
-//NOTE: more to add here. do not change to implicit return
+//TODO: more to add here. do not change to implicit return
 const LandingPage = () => {
   return (
     <div>

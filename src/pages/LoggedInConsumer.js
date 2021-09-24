@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import NavBarConsumerHome from '../components/NavBarConsumerHome';
 import axios from 'axios';
+import NavBarConsumerHome from '../components/NavBarConsumerHome';
 import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 
 const LoggedInConsumer = ({ user }) => {
-    const [data, setData] = useState({
-        user: {},
-        projects: {},
-        contractors: {},
-    });
 
     useEffect(() => {
         axios({
@@ -20,7 +15,7 @@ const LoggedInConsumer = ({ user }) => {
         });
     });
 
-    //NOTE: more to add here. do not change to implicit return
+    //TODO: more to add here. do not change to implicit return
     return (
         <div>
             <NavBarConsumerHome />

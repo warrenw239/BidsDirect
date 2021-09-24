@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import '../styles/NavBar.css';
 import LogOutButton from './LogOutButton';
+import React, { useState } from 'react';
 
 const NavBarContractorHome = () => {
     const [navStatus, useNavBar] = useState(false);

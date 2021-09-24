@@ -1,8 +1,8 @@
-import React from 'react';
-import NavBarForAboutPages from '../components/NavBarForAboutPages';
 import '../styles/NavBar.css';
+import NavBarForAboutPages from '../components/NavBarForAboutPages';
+import React from 'react';
 
-//NOTE: more to add here. do not change to implicit return
+//TODO: more to add here. do not change to implicit return
 const ForConsumers = () => {
   return (
     <div>
