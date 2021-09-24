@@ -1,7 +1,8 @@
-import '../styles/NavBar.css';
 import React, { useState } from 'react';
+import '../styles/NavBar.css';
+import PropTypes from 'prop-types';
 
-const NavBarForAboutPages = () => {
+const NavBar = ({buttons, menuOptions}) => {
     const [navStatus, useNavBar] = useState(false);
     return (
         <>
@@ -18,6 +19,7 @@ const NavBarForAboutPages = () => {
                         BidsDirect: Find The Best Fit For Your Next Project
                     </span>
                     <nav>
+                        {buttons.map((button, key = button.key) => <div key={key}>{button.html}</div>)}
                         <ul
                             className="mainNav"
                             style={
@@ -26,17 +28,11 @@ const NavBarForAboutPages = () => {
                                     : null
                             }
                         >
-                            <li>
-                                <a className="mainNavLink" href="/">
-                                    Login Page
-                                </a>
-                            </li>
+                            {menuOptions.map((option, key = option.key) => <li key={key}>{option.html}</li>)}
                         </ul>
                     </nav>
                     <button
-                        onClick={() =>
-                            useNavBar((currentStatus) => !currentStatus)
-                        }
+                        onClick={() => useNavBar((currentStatus) => !currentStatus)}
                         className={`navToggle ${navStatus ? 'open' : null}`}
                     >
                         <span />
@@ -44,9 +40,7 @@ const NavBarForAboutPages = () => {
                         <span />
                     </button>
                     <div
-                        onClick={() =>
-                            useNavBar((currentStatus) => !currentStatus)
-                        }
+                        onClick={() => useNavBar((currentStatus) => !currentStatus)}
                         className={`overlay ${navStatus ? 'open' : ''}`}
                     />
                 </div>
@@ -56,4 +50,10 @@ const NavBarForAboutPages = () => {
     );
 };
 
-export default NavBarForAboutPages;
+NavBar.propTypes = {
+    buttons: PropTypes.array,
+    menuOptions: PropTypes.array,
+    key: PropTypes.string
+};
+
+export default NavBar;

@@ -1,9 +1,9 @@
+import React from 'react';
 import ForConsumers from './pages/ForConsumers';
 import ForContractors from './pages/ForContractors';
 import LandingPage from './pages/LandingPage';
 import LoggedInConsumer from './pages/LoggedInConsumer';
 import LoggedInContractor from './pages/LoggedInContractor';
-import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -44,7 +44,10 @@ const App = () => {
                     <Route exact path="/">
                         <LoggedInConsumer user={user} />
                     </Route>
-                    <Route exact path="/securedConsumer">
+                    <Route exact path="/FindContractors">
+                        <div>secured page. add info about contractors</div>
+                    </Route>
+                    <Route exact path="/CurrentProjects">
                         <div>secured page. add info about projects</div>
                     </Route>
                 </Switch>

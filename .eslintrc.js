@@ -13,6 +13,7 @@ module.exports = {
     },
     plugins: ['react'],
     rules: {
+        'implicit-arrow-linebreak': ['error', 'beside'],
         'no-console': ['error', { allow: ['warn', 'error'] }],
         semi: ['error', 'always'],
         quotes: ['error', 'single'],
@@ -29,9 +30,9 @@ module.exports = {
             'error',
             {
                 ignoreCase: true,
-                ignoreDeclarationSort: false,
+                ignoreDeclarationSort: true,
                 ignoreMemberSort: true,
-                memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+                memberSyntaxSortOrder: ['single', 'none', 'all', 'multiple'],
                 allowSeparatedGroups: true,
             },
         ],
