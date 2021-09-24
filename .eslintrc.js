@@ -13,6 +13,7 @@ module.exports = {
     },
     plugins: ['react'],
     rules: {
+        'no-console': ['error', { allow: ['warn', 'error'] }],
         semi: ['error', 'always'],
         quotes: ['error', 'single'],
         'no-unused-vars': [

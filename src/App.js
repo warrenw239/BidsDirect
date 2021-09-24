@@ -38,7 +38,6 @@ const App = () => {
         user &&
         user['https://example.com/roles'] === 'Consumer'
     ) {
-        console.log(user);
         return (
             <Router>
                 <Switch>
@@ -57,7 +56,6 @@ const App = () => {
         user &&
         user['https://example.com/roles'] === 'Contractor'
     ) {
-        console.log(user);
         return (
             <Router>
                 <Switch>
