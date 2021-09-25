@@ -14,7 +14,6 @@ module.exports = {
     plugins: ['react'],
     rules: {
         'implicit-arrow-linebreak': ['error', 'beside'],
-        'no-console': ['error', { allow: ['warn', 'error'] }],
         semi: ['error', 'always'],
         quotes: ['error', 'single'],
         'no-unused-vars': [

@@ -36,7 +36,7 @@ const App = () => {
     if (
         isAuthenticated &&
         user &&
-        user['https://example.com/roles'] === 'Consumer'
+        user['https://bidsdirect.com/roles'] === 'Consumer'
     ) {
         return (
             <Router>
@@ -57,16 +57,13 @@ const App = () => {
     if (
         isAuthenticated &&
         user &&
-        user['https://example.com/roles'] === 'Contractor'
+        user['https://bidsdirect.com/roles'] === 'Contractor'
     ) {
         return (
             <Router>
                 <Switch>
                     <Route exact path="/">
                         <LoggedInContractor />
-                    </Route>
-                    <Route exact path="/securedConsumer">
-                        <div>secured page. add info about projects</div>
                     </Route>
                 </Switch>
             </Router>

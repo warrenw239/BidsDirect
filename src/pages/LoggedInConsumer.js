@@ -1,61 +1,26 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import NavBar from '../components/NavBar';
-import PropTypes from 'prop-types';
-import LogOutButton from '../components/LogOutButton';
 
-const LoggedInConsumer = ({ user }) => {
-    useEffect(() => {
-        axios({
-            method: 'post',
-            url: 'http://localhost:3000/data',
-            params: {
-                user: user,
-            },
-        });
-    });
+const LoggedInConsumer = () => {
 
     //TODO: more to add here. do not change to implicit return
     return (
         <>
             <NavBar
-                buttons={[{ html: <LogOutButton />, key: 'logoutbutton' }]}
+                showLogout={true}
                 menuOptions={[
                     {
-                        html: (
-                            <a className="mainNavLink" href="/CurrentProjects">
-                                Current Projects
-                            </a>
-                        ),
-                        key: 'CurrentProjects',
+                        itemName: 'Current Projects', 
+                        href: '/CurrentProjects'
                     },
                     {
-                        html: (
-                            <a
-                                    className="mainNavLink"
-                                    href="/startNewProject"
-                                >
-                                    Start New Project
-                                </a>
-                        ),
-                        key: 'StartNewProject',
-                    },
-                    {
-                        html: (
-                            <a className="mainNavLink" href="/FindContractors">
-                                    Find Contractors
-                                </a>
-                        ),
-                        key: 'FindContractors',
+                        itemName: 'Find Contractors', 
+                        href: '/FindContractors'
                     },
                 ]}
             />
         </>
     );
-};
-
-LoggedInConsumer.propTypes = {
-    user: PropTypes.object,
 };
 
 export default LoggedInConsumer;

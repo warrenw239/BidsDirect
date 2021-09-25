@@ -1,5 +1,4 @@
 import React from 'react';
-import LoginButton from '../components/LogInButton';
 import NavBar from '../components/NavBar';
 import '../styles/NavBar.css';
 
@@ -8,23 +7,15 @@ const LandingPage = () => {
     return (
         <>
             <NavBar
-                buttons={[{html: <LoginButton />, key: 'loginbutton'}]}
+                showLogin={true}
                 menuOptions={[
                     {
-                        html: (
-                            <a className="mainNavLink" href="/ForConsumers">
-                                For Consumers
-                            </a>
-                        ),
-                        key: 'ForConsumers',
+                        itemName: 'For Consumers',
+                        href: '/ForConsumers'
                     },
                     {
-                        html: (
-                            <a className="mainNavLink" href="/ForContractors">
-                                For Contractors
-                            </a>
-                        ),
-                        key: 'ForContractors',
+                        itemName: 'For Contractors',
+                        href: '/ForContractors'
                     },
                 ]}
             />

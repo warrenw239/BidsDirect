@@ -7,16 +7,10 @@ const ForContractors = () => {
     return (
         <>
             <NavBar
-                buttons={[]}
                 menuOptions={[
                     {
-                        html: (
-                            <a className="mainNavLink" href="/">
-                                Log In
-                            </a>
-                        ),
-
-                        key: 'login',
+                        itemName: 'Login Page',
+                        href: '/'
                     },
                 ]}
             />

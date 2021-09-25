@@ -8,7 +8,7 @@ const Auth0providerWithHistory = ({ children }) => {
     const domain = process.env.REACT_APP_AUTHO_DOMAIN;
     const clientId = process.env.REACT_APP_AUTHO_CLIENT_ID;
 
-    const onRedirectCallback = (appState) => history.push(appState?.returnTo || window.location.pathname);
+    const onRedirectCallback = (appState) => history.push(appState?.returnTo);
 
     return (
         <Auth0Provider
@@ -23,7 +23,7 @@ const Auth0providerWithHistory = ({ children }) => {
 };
 
 Auth0providerWithHistory.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.element.isRequired
 };
 
 export default Auth0providerWithHistory;

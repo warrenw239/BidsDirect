@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import '../styles/NavBar.css';
 import PropTypes from 'prop-types';
+import LoginButton from './LogInButton';
+import LogOutButton from './LogOutButton';
 
-const NavBar = ({buttons, menuOptions}) => {
+const NavBar = ({showLogin = false, showLogout = false, menuOptions = []}) => {
     const [navStatus, useNavBar] = useState(false);
     return (
         <>
@@ -19,7 +21,8 @@ const NavBar = ({buttons, menuOptions}) => {
                         BidsDirect: Find The Best Fit For Your Next Project
                     </span>
                     <nav>
-                        {buttons.map((button, key = button.key) => <div key={key}>{button.html}</div>)}
+                        {showLogin && <LoginButton />}
+                        {showLogout && <LogOutButton />}
                         <ul
                             className="mainNav"
                             style={
@@ -28,7 +31,7 @@ const NavBar = ({buttons, menuOptions}) => {
                                     : null
                             }
                         >
-                            {menuOptions.map((option, key = option.key) => <li key={key}>{option.html}</li>)}
+                            {menuOptions.map(({itemName, href}) => <li key={itemName}><a href={href}>{itemName}</a></li>)}
                         </ul>
                     </nav>
                     <button
@@ -45,7 +48,6 @@ const NavBar = ({buttons, menuOptions}) => {
                     />
                 </div>
             </header>
-            <div className="wrapper"></div>
         </>
     );
 };
@@ -53,7 +55,9 @@ const NavBar = ({buttons, menuOptions}) => {
 NavBar.propTypes = {
     buttons: PropTypes.array,
     menuOptions: PropTypes.array,
-    key: PropTypes.string
+    showLogin: PropTypes.bool,
+    showLogout: PropTypes.bool
+    
 };
 
 export default NavBar;
