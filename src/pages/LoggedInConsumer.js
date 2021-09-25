@@ -10,8 +10,8 @@ const LoggedInConsumer = () => {
                 showLogout={true}
                 menuOptions={[
                     {
-                        itemName: 'Current Projects', 
-                        href: '/CurrentProjects'
+                        itemName: 'Create New Project', 
+                        href: '/CreateNewProject'
                     },
                     {
                         itemName: 'Find Contractors', 

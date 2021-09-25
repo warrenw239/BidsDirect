@@ -6,6 +6,7 @@ import LoggedInConsumer from './pages/LoggedInConsumer';
 import LoggedInContractor from './pages/LoggedInContractor';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import CreateNewProject from './pages/CreateNewProject';
 
 const App = () => {
     const { isAuthenticated, isLoading, user } = useAuth0();
@@ -47,8 +48,8 @@ const App = () => {
                     <Route exact path="/FindContractors">
                         <div>secured page. add info about contractors</div>
                     </Route>
-                    <Route exact path="/CurrentProjects">
-                        <div>secured page. add info about projects</div>
+                    <Route exact path="/CreateNewProject">
+                        <CreateNewProject user={user}/> 
                     </Route>
                 </Switch>
             </Router>
@@ -59,11 +60,12 @@ const App = () => {
         user &&
         user['https://bidsdirect.com/roles'] === 'Contractor'
     ) {
+        console.info(user);
         return (
             <Router>
                 <Switch>
                     <Route exact path="/">
-                        <LoggedInContractor />
+                        <LoggedInContractor user={user}/>
                     </Route>
                 </Switch>
             </Router>
