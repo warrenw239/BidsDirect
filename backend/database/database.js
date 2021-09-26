@@ -4,12 +4,13 @@ const mongoose = require('mongoose');
 
 const host = process.env.host || 'localhost';
 
-const connection = () => mongoose.connect(`http://${host}:27017/data`, () => console.info(`database connected at ${host}`));
+const connection = () => mongoose.connect(`mongodb://${host}:27017/BidsDirect`, () => console.info(`database connected at ${host}`));
 
 const consumerSchema = new mongoose.Schema({
     username: String,
     email: String,
-    projects: Array,
+    projects: Object,
+    picture: String
 });
 
 const projectSchema = new mongoose.Schema({
