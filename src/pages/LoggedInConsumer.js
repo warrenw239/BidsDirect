@@ -14,7 +14,6 @@ const LoggedInConsumer = ({ user }) => {
         .get(`http://${HOST}:${PORT}/data`, { params: { user } })
         .then((profile) => {
             setUserData(profile.data);
-            console.log(profile);
         });
     }, []);
 
