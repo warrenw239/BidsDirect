@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import ConsumerProfile from '../components/ConsumerProfile';
+import ConsumerProjects from '../components/ConsumerProjects';
 
 const LoggedInConsumer = ({ user }) => {
     const HOST = process.env.HOST || 'localhost';
@@ -35,6 +36,7 @@ const LoggedInConsumer = ({ user }) => {
                 ]}
             />
         <ConsumerProfile username={userData.username} picture={userData.picture}/>
+        <ConsumerProjects projects={projects}/>
         </>
     );
 };

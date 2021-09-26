@@ -9,7 +9,7 @@ const connection = () => mongoose.connect(`mongodb://${host}:27017/BidsDirect`, 
 const consumerSchema = new mongoose.Schema({
     username: String,
     email: String,
-    projects: Object,
+    projects: Array,
     picture: String
 });
 

@@ -1,15 +1,15 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const ConsumerProjects = () => {
+const ConsumerProjects = ({ projects }) => {
     
-    return <div>Projects Not Yet Accepted Bid
-
+    return <div>Projects: Awaiting Bid Acceptance
+        {projects.map((project) => <div key={project.id}>{project.title}</div>)}
     </div>;
 };
 
-// ConsumerProjects.propTypes = {
-//     user: PropTypes.object.isRequired,
-// };
+ConsumerProjects.propTypes = {
+    projects: PropTypes.array.isRequired,
+};
 
 export default ConsumerProjects;
