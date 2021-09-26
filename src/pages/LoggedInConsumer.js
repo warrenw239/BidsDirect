@@ -7,11 +7,14 @@ const LoggedInConsumer = ({ user }) => {
     const HOST = process.env.HOST || 'localhost';
     const PORT = process.env.PORT || '3000';
 
-    useEffect(() => {
-        axios.get(`http://${HOST}:${PORT}/data`, { params: { user } }).then((profile) => {
+    const [userData, setUserData] = useState({});
 
-            // eslint-disable-next-line no-unused-vars
-            const [userData] = useState(profile);
+    useEffect(() => {
+        axios
+        .get(`http://${HOST}:${PORT}/data`, { params: { user } })
+        .then((profile) => {
+            setUserData(profile.data);
+            console.log(profile);
         });
     }, []);
 
@@ -31,7 +34,7 @@ const LoggedInConsumer = ({ user }) => {
                     },
                 ]}
             />
-            <div>testing</div>
+        <div>{userData.picture}</div>
         </>
     );
 };

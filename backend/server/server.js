@@ -11,7 +11,6 @@ app.use(express.static('/Users/warren/Documents/Project/BidsDirect/build'));
 app.get('/data', (req, res) => {
     const userData = JSON.parse(req.query.user);
     helpers.readAllConsumers(userData.email).then((user) => {
-        // console.log(user);
         !user
             ? helpers.createNewUser({
                   username: userData.nickname,
