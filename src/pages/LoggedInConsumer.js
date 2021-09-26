@@ -36,7 +36,7 @@ const LoggedInConsumer = ({ user }) => {
                 ]}
             />
         <ConsumerProfile username={userData.username} picture={userData.picture}/>
-        <ConsumerProjects projects={projects}/>
+        <ConsumerProjects projects={userData.projects} />
         </>
     );
 };

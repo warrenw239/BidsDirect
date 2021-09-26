@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/ConsumerProjects.css';
 
 const ConsumerProjects = ({ projects }) => {
-    
-    return <div>Projects: Awaiting Bid Acceptance
-        {projects.map((project) => <div key={project.id}>{project.title}</div>)}
+    //TODO: ADD AWAITING AND ACCEPTED SECTION
+    return <div className='project'>Projects: Awaiting Bid Acceptance
+        {projects.map((project) => <div key={project.id}>{project.title}placeholder</div>)}
     </div>;
 };
 
