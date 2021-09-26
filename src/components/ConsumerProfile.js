@@ -12,8 +12,8 @@ const ConsumerProfile = ({ username, picture }) => {
 };
 
 ConsumerProfile.propTypes = {
-    username: PropTypes.string,
-    picture: PropTypes.string,
+    username: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
 };
 
 export default ConsumerProfile;
