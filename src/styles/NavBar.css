@@ -29,6 +29,9 @@ li {
 .logo {
     font-size: 1.25em;
     padding: 0.95em 0;
+    color: '#fff';
+    font-style: 'italic';
+    font-weight: '400';
 }
 .navToggle {
     display: block;

@@ -7,6 +7,8 @@ const Auth0providerWithHistory = ({ children }) => {
     const history = useHistory();
     const domain = process.env.REACT_APP_AUTHO_DOMAIN;
     const clientId = process.env.REACT_APP_AUTHO_CLIENT_ID;
+    const PORT = process.env.PORT;
+    const URL = process.env.API_URL;
 
     const onRedirectCallback = (appState) => history.push(appState?.returnTo);
 
@@ -14,7 +16,7 @@ const Auth0providerWithHistory = ({ children }) => {
         <Auth0Provider
             domain={domain}
             clientId={clientId}
-            redirectUri={window.location.origin}
+            redirectUri={`http://${URL}:${PORT}`}
             onRedirectCallback={onRedirectCallback}
         >
             {children}
@@ -23,7 +25,7 @@ const Auth0providerWithHistory = ({ children }) => {
 };
 
 Auth0providerWithHistory.propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.element.isRequired,
 };
 
 export default Auth0providerWithHistory;

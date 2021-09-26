@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
-import '../styles/NavBar.css';
 import PropTypes from 'prop-types';
 import LoginButton from './LogInButton';
 import LogOutButton from './LogOutButton';
+import '../styles/NavBar.css';
 
-const NavBar = ({showLogin = false, showLogout = false, menuOptions = []}) => {
+const NavBar = ({
+    showLogin = false,
+    showLogout = false,
+    menuOptions = [],
+}) => {
     const [navStatus, useNavBar] = useState(false);
     return (
         <>
             <header className="header">
                 <div className="navContainer">
-                    <span
-                        className="logo"
-                        style={{
-                            color: '#fff',
-                            fontStyle: 'italic',
-                            fontWeight: '400',
-                        }}
-                    >
+                    <span className="logo">
                         BidsDirect: Find The Best Fit For Your Next Project
                     </span>
                     <nav>
@@ -31,7 +28,11 @@ const NavBar = ({showLogin = false, showLogout = false, menuOptions = []}) => {
                                     : null
                             }
                         >
-                            {menuOptions.map(({itemName, href}) => <li key={itemName}><a href={href}>{itemName}</a></li>)}
+                            {menuOptions.map(({ itemName, href }) => (
+                                <li key={itemName}>
+                                    <a href={href}>{itemName}</a>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                     <button
@@ -56,8 +57,7 @@ NavBar.propTypes = {
     buttons: PropTypes.array,
     menuOptions: PropTypes.array,
     showLogin: PropTypes.bool,
-    showLogout: PropTypes.bool
-    
+    showLogout: PropTypes.bool,
 };
 
 export default NavBar;
