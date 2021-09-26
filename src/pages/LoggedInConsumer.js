@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import ConsumerProfile from '../components/ConsumerProfile';
 
 const LoggedInConsumer = ({ user }) => {
     const HOST = process.env.HOST || 'localhost';
@@ -14,7 +15,6 @@ const LoggedInConsumer = ({ user }) => {
         .get(`http://${HOST}:${PORT}/data`, { params: { user } })
         .then((profile) => {
             setUserData(profile.data);
-            console.log(profile);
         });
     }, []);
 
@@ -34,7 +34,7 @@ const LoggedInConsumer = ({ user }) => {
                     },
                 ]}
             />
-        <div>{userData.picture}</div>
+        <ConsumerProfile username={userData.username} picture={userData.picture}/>
         </>
     );
 };
